@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/Crate.tscn" type="PackedScene" id=1]
+[ext_resource path="res://FPSCharacter.tscn" type="PackedScene" id=2]
 
 [sub_resource type="SpatialMaterial" id=1]
 albedo_color = Color( 0.286275, 0.313726, 0.341176, 1 )
@@ -17,7 +18,7 @@ points = PoolVector3Array( 10, 0, 10, -10, 0, 10, 10, 0, -10, -10, 0, -10 )
 [node name="Ground" type="StaticBody" parent="."]
 
 [node name="MeshInstance" type="MeshInstance" parent="Ground"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0944796, 0.0631865, 0.0122795 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.127538, 0.0772932, -0.117792 )
 mesh = SubResource( 2 )
 material/0 = null
 
@@ -40,3 +41,6 @@ transform = Transform( 0.456703, 0, 0.889619, 0, 1, 0, -0.889619, 0, 0.456703, 0
 transform = Transform( 0.939326, 0.165016, 0.300728, -0.320125, 0.736663, 0.595691, -0.123237, -0.655818, 0.744792, 0, 4.22297, 0 )
 shadow_enabled = true
 shadow_color = Color( 0.129412, 0.145098, 0.160784, 1 )
+
+[node name="FPSCharacter" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.64807, 1.00785, 2.38648 )
